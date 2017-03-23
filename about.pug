@@ -1,0 +1,64 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href='./style.css', rel='stylesheet')
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i", rel="stylesheet")
+        meta(name="theme-color", content="#d95f49")
+        title Document
+    body
+        .main
+            div.main-location 
+                h2.main-locationName #{location.name} 
+                h3.main-locationNameRegion
+                    span.main-locationRegion #{location.region} 
+                    span.main-locationCountry - #{location.country}
+            .main-info
+                img.main-info-img(src=todayAvg.condition.icon)
+                div.main-info-col.main-info-col1
+                    div.main-temp #{todayAvg.avgtemp_c} °C
+                    div.main-vent #{todayAvg.maxwind_kph} km/h
+                div.main-info-col
+                    div.main-humidity #{todayAvg.avghumidity}%
+                    div.main-precipitation #{todayAvg.totalprecip_mm} mm
+            p.main-lastUpdate Synchro : #{date.lastUpdate}
+        .about
+            h2.about-title 2rouesoupas2roues.fr ?
+            p.about-text 2rouesoupas2roues.fr vous permet de savoir rapidement si vous pouvez prendre votre 2 roues, que ce soit une moto, un vélo, ou tout autre moyen de transport dépendant des conditions climatiques. Vous pouvez également utiliser 2rouesoupas2roues.fr pour des déplacements à pied (balade, course à pied, etc).
+            p.about-text L'idée est d'avoir rapidement une tendance de la météo quotidienne à travers différentes informations facilement accessible : 
+            ul.about-list
+                li.about-listEl Un fond de couleur du bleu au rouge permettant de connaître la tendance de la journée.
+                li.about-listEl La valeur moyenne de différentes metrics essentielles : 
+                li.about-listEl
+                    ul.about-list
+                        li.about-listEl Température
+                        li.about-listEl Vitesse du vent
+                        li.about-listEl Pourcentage d'humidité
+                        li.about-listEl Précipitation
+                li.about-listEl Les valeurs par heure de chaque metrics, accompagné d'une pastille reprenant le principe de la couleur de fond
+            p.about-text Le degradé de bleu vers rouge utilisé pour le fond et les pastilles est calculé grâce à un ratio reprennant les 4 metrics.
+            p.about-text Certe la passion dépasse la météo, mais cette dernière influence beaucoup le plaisir de rouler !
+            h2.about-title Qui suis-je ?
+            p.about-text 
+                a(href='http://johnathan.fr') Johnathan MEUNIER
+                span , fondateur de Lille Web, motard et cycliste, je consulta la météo tous les jours et je n'ai pas encore trouvé d'application convaincante. 
+            h2.about-title Techniquement
+            p.about-text Etant développeur, ce projet est également une excuse pour essayer des technologies intéressantes, vous pouvez retrouver en vrac : 
+            ul.about-list
+                li.about-listEl HTTP2
+                li.about-listEl Service Worker pour la gestion du cache
+                li.about-listEl Utilisation de node.js sans Express
+                li.about-listEl Pug
+            p.about-text Le but final est de faire de cette web app une Progressive Web App, installable et utilisacomme une application classique sur Android.
+            h2.about-title Retrouvez-moi
+            ul.about-list
+                li.about-listEl Twitter : 
+                    a(href='http://twitter.com/johnathansup') @JohnathanSUP
+                li.about-listEl Instagram : 
+                    a(href='https://www.instagram.com/john.meunier/') john.meunier
+                li.about-listEl Site web : 
+                    a(href='http://johnathan.fr/') Johnathan.fr
+                li.about-listEl Mail : 
+                    a(href='mailto:johnathan@lilleweb.fr') johnathan@lilleweb.fr
+        script(src='./global.js')            

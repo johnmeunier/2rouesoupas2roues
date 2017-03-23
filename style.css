@@ -1,0 +1,124 @@
+body{
+    padding : 1em 1em;
+    margin : 0px;
+    color : #fff;
+    background : linear-gradient( 45deg,#d87260, #d95f49);
+    text-align : center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.main{
+    border-bottom : 1px solid rgba(255,255,255,.50);
+    padding-bottom : 1em;
+    margin-bottom : 1em;
+}
+
+.main-location{
+    font-weight: 300;
+    color : rgba(255,255,255,.75);
+}
+.main-locationName{
+    font-size : 2em;
+    font-weight: 400;
+    color : #fff;
+    margin-bottom : 0px;
+    font-weight: 300;
+}
+.main-locationNameRegion{
+    font-size: 0.83em;
+    margin : 0px;
+    font-weight: 300;
+}
+.main-info{
+    font-size: 0.94em;
+    margin-top : 0.83em;
+}
+.main-info-img{
+    display : inline-block;
+    vertical-align : middle;
+    border-right: 1px solid rgba(255,255,255,.50);
+    padding-right: 2em;
+}
+.main-info-col{
+    display : inline-block;
+    vertical-align : middle;
+}
+.main-info-col1{
+    margin : 0px 2em;
+}
+.main-info-col > div{
+    margin: 0.65em 0px;
+}
+.main-lastUpdate{
+    font-size: 0.65em;
+    font-style : italic;
+    margin-bottom : 0px;
+    margin-top : 0.83em;
+}
+
+
+.byHour{
+
+}
+.hours{
+    list-style: none;
+    padding : 0px;
+}
+.hour{
+    box-sizing: border-box;
+    display : inline-block;
+    vertical-align : top;
+    width : 33%;
+    padding: 0px 0.65em;
+    margin-bottom : 1em;
+    padding-bottom: 0.5em;
+    /*opacity : 0.50;*/
+}
+
+.hour:first-child{
+    opacity : 1;
+}
+.hour:nth-of-type(3n+2){
+    border-left : 1px solid rgba(255,255,255,.50);
+    border-right : 1px solid rgba(255,255,255,.50);
+}
+.hour-time{
+    font-size : 1em;
+    margin-top : 0px;
+    margin-bottom : 0px;
+}
+
+.hour div{
+    font-size : 0.65em;
+    margin-bottom : 3px;
+    margin-top : 3px;
+}
+
+/* Page about */
+.about{
+    text-align : left;
+}
+h2.about-title{
+    border-bottom : 1px solid rgba(255,255,255,.50);
+    font-weight: 300;
+}
+
+ul.about-list{
+    font-weight: 300;
+    font-size : 0.9em;
+}
+
+li.about-listEl{
+    font-weight: 300;
+    font-size : 0.9em;
+}
+
+p.about-text{
+    font-weight: 300;
+    font-size : 0.9em;
+}
+.about a{
+    color : #fff;
+    font-style : italic;
+}

@@ -1,0 +1,38 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href='./style.css', rel='stylesheet')
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i", rel="stylesheet")
+        meta(name="theme-color", content="#d95f49")
+        title Document
+    body
+        .main
+            div.main-location 
+                h2.main-locationName #{location.name} 
+                h3.main-locationNameRegion
+                    span.main-locationRegion #{location.region} 
+                    span.main-locationCountry - #{location.country}
+            .main-info
+                img.main-info-img(src=todayAvg.condition.icon)
+                div.main-info-col.main-info-col1
+                    div.main-temp #{todayAvg.avgtemp_c} °C
+                    div.main-vent #{todayAvg.maxwind_kph} km/h
+                div.main-info-col
+                    div.main-humidity #{todayAvg.avghumidity}%
+                    div.main-precipitation #{todayAvg.totalprecip_mm} mm
+            p.main-lastUpdate Synchro : #{date.lastUpdate}
+        .byHour
+            ul.hours
+                for hour,i in todayByHour
+                    li.hour
+                        img(src=hour.condition.icon)
+                        h3.hour-time #{Moment(hour.time_epoch*1000).format('H')}h
+                        div.hour-temp #{hour.temp_c} °C
+                        div.hour-wind #{hour.wind_kph} km/h
+                        div.hour-humidity #{hour.humidity}%
+                        div.hour-precip #{hour.precip_mm} mm
+                    if(i%3 == 2)
+                        br
+        script(src='./global.js')

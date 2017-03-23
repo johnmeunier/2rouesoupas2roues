@@ -1,0 +1,13 @@
+{
+  "name": "PWA",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "jmeunier",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.18.0",
+    "pug": "^2.0.0-beta11",
+    "request": "^2.81.0",
+    "spdy": "^3.4.4"
+  }
+}
